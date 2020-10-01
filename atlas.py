@@ -88,6 +88,7 @@ class Process(Request,Params):
 	def waf_detector(self)->None:
 		# -- 
 		payload  = ['../etc/passwd']
+		payload  = ['../etc/group']
 		payload += ['" AND 1=2, OR 1=2']
 		payload += ['<scrit>alert(1)</script>']
 		payload += ['7116 AND 1=1 UNION ALL SELECT 1,NULL,']
